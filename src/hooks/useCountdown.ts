@@ -9,8 +9,8 @@ interface CountdownState {
   targetDate: Date;
 }
 
-// Default deadline: July 15, 2025 – a representative geopolitical deadline
-const DEFAULT_DEADLINE = new Date("2025-07-15T00:00:00Z");
+// Deadline: Tuesday April 7, 2026 at 8:00 PM Eastern Time (00:00 UTC April 8)
+const DEFAULT_DEADLINE = new Date("2026-04-08T00:00:00Z");
 
 export function useCountdown(customDeadline?: Date): CountdownState {
   const [targetDate, setTargetDate] = useState<Date>(customDeadline || DEFAULT_DEADLINE);
