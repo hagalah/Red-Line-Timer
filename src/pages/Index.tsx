@@ -1,6 +1,7 @@
 import CountdownTimer from "@/components/CountdownTimer";
 import RedLine from "@/components/RedLine";
 import NewsFeed from "@/components/NewsFeed";
+import DeadlineHistory from "@/components/DeadlineHistory";
 import ShareButtons from "@/components/ShareButtons";
 import { Radio } from "lucide-react";
 
@@ -35,7 +36,10 @@ export default function Index() {
           </h1>
 
           <p className="text-muted-foreground text-xs sm:text-sm tracking-[0.2em] uppercase font-display text-center">
-            Time until the next critical deadline
+            Trump's deadline for Iran to reopen the Strait of Hormuz
+          </p>
+          <p className="text-primary/60 text-[11px] sm:text-xs tracking-wider font-display mt-2 text-center">
+            Tuesday, April 7 — 8:00 PM Eastern Time
           </p>
         </header>
 
@@ -65,6 +69,7 @@ export default function Index() {
 
         {/* News feed */}
         <NewsFeed />
+        <DeadlineHistory />
 
         {/* Footer */}
         <footer className="w-full max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 mt-8">

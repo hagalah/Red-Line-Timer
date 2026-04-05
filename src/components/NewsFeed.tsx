@@ -8,12 +8,35 @@ interface NewsItem {
   url: string;
 }
 
-const MOCK_NEWS: NewsItem[] = [
-  { id: "1", title: "US tightens sanctions on Iranian oil exports amid Strait of Hormuz tensions", source: "Reuters", time: "2h ago", url: "#" },
-  { id: "2", title: "Trump issues 72-hour ultimatum over Hormuz shipping lane disputes", source: "AP News", time: "4h ago", url: "#" },
-  { id: "3", title: "Iran responds to latest diplomatic deadline with military exercises", source: "BBC", time: "6h ago", url: "#" },
-  { id: "4", title: "Oil prices surge as Strait of Hormuz tensions escalate", source: "Bloomberg", time: "8h ago", url: "#" },
-  { id: "5", title: "Pentagon moves carrier group closer to Persian Gulf region", source: "CNN", time: "12h ago", url: "#" },
+const LIVE_NEWS: NewsItem[] = [
+  {
+    id: "1",
+    title: "Deadline for Iran to open Strait of Hormuz is Tuesday evening, Trump tells WSJ",
+    source: "Reuters",
+    time: "Apr 5",
+    url: "https://www.reuters.com/world/middle-east/deadline-iran-open-strait-hormuz-is-tuesday-evening-trump-tells-wsj-2026-04-05/",
+  },
+  {
+    id: "2",
+    title: "Trump warns Iran to reopen Strait of Hormuz by Tuesday or face 'hell'",
+    source: "The Guardian",
+    time: "Apr 5",
+    url: "https://www.theguardian.com/world/2026/apr/05/trump-warns-iran-to-reopen-strait-of-hormuz-by-tuesday-or-face-hell",
+  },
+  {
+    id: "3",
+    title: "Trump threatens Iran with bombing if Strait of Hormuz not reopened",
+    source: "Axios",
+    time: "Apr 5",
+    url: "https://www.axios.com/2026/04/05/trump-iran-strait-hormuz-bombing-threat",
+  },
+  {
+    id: "4",
+    title: "'Gates of hell will open' — Iran rejects Trump's 48-hour ultimatum to reopen Strait",
+    source: "Times of India",
+    time: "Apr 5",
+    url: "https://timesofindia.indiatimes.com/world/middle-east/gates-of-hell-will-open-for-you-iran-rejects-trumps-helpless-48-hour-ultimatum-to-reopen-strait-of-hormuz/articleshow/130032108.cms",
+  },
 ];
 
 export default function NewsFeed() {
@@ -23,10 +46,12 @@ export default function NewsFeed() {
         Latest Intelligence
       </h2>
       <div className="flex flex-col gap-3">
-        {MOCK_NEWS.map((item) => (
+        {LIVE_NEWS.map((item) => (
           <a
             key={item.id}
             href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group flex items-start justify-between gap-4 p-4 rounded-lg bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:box-glow"
           >
             <div className="flex-1 min-w-0">
