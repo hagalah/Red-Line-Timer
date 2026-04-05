@@ -1,3 +1,7 @@
-# Welcome to your Lovable project
+# Welcome to RED LINE TIMER
 
-TODO: Document your project here
+Trump's deadline for Iran to reopen the Strait of Hormuz
+
+https://www.redlinetimer.com/
+
+
