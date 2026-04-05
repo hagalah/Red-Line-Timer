@@ -1,4 +1,4 @@
-import { Share2 } from "lucide-react";
+
 
 const SHARE_TEXT = "The clock is ticking ⏳ #RedLineTimer";
 
@@ -8,7 +8,7 @@ export default function ShareButtons() {
 
   return (
     <div className="flex items-center gap-3">
-      <Share2 className="w-4 h-4 text-muted-foreground" />
+      
       <a
         href={href}
         target="_blank"
