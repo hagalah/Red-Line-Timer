@@ -1,9 +1,29 @@
+import { useState, useEffect } from "react";
 import CountdownTimer from "@/components/CountdownTimer";
 import RedLine from "@/components/RedLine";
 import NewsFeed from "@/components/NewsFeed";
 import DeadlineHistory from "@/components/DeadlineHistory";
 import ShareButtons from "@/components/ShareButtons";
 import { Radio } from "lucide-react";
+
+function LastUpdated() {
+  const [timestamp, setTimestamp] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => setTimestamp(new Date()), 60 * 60 * 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 mt-6 sm:mt-8 mb-12 sm:mb-16 px-4">
+      <div className="flex items-center gap-2 text-xs text-muted-foreground font-display tracking-wider">
+        <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+        Last updated: {timestamp.toLocaleString("en-US", { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" })}
+      </div>
+      <ShareButtons />
+    </div>
+  );
+}
 
 export default function Index() {
   return (
@@ -60,8 +80,6 @@ export default function Index() {
 
         {/* Meta info */}
         <LastUpdated />
-        </div>
-        </div>
 
         {/* News feed */}
         <NewsFeed />
