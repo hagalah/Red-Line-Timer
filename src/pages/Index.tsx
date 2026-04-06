@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import CountdownTimer from "@/components/CountdownTimer";
 import RedLine from "@/components/RedLine";
 import NewsFeed from "@/components/NewsFeed";
@@ -94,6 +95,9 @@ export default function Index() {
             <span className="text-[10px] text-muted-foreground/50">
               Data sourced from public news feeds
             </span>
+            <Link to="/contact" className="text-[10px] text-muted-foreground/50 hover:text-primary transition-colors">
+              Contact
+            </Link>
           </div>
         </footer>
       </div>
