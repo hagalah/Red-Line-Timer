@@ -42,8 +42,10 @@ const LIVE_NEWS: NewsItem[] = [
 export default function NewsFeed() {
   return (
     <section className="w-full max-w-3xl mx-auto px-4 sm:px-6">
-      <h2 className="font-display text-sm sm:text-base uppercase tracking-[0.3em] text-muted-foreground mb-6 sm:mb-8">
+      <h2 className="font-display text-xs sm:text-sm uppercase tracking-[0.3em] text-muted-foreground mb-6 sm:mb-8 flex items-center gap-3">
+        <span className="h-px flex-1 bg-border/50" />
         Latest Intelligence
+        <span className="h-px flex-1 bg-border/50" />
       </h2>
       <div className="flex flex-col gap-3">
         {LIVE_NEWS.map((item) => (
@@ -52,19 +54,19 @@ export default function NewsFeed() {
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-start justify-between gap-4 p-4 rounded-lg bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:box-glow"
+            className="group flex items-start justify-between gap-4 p-4 rounded-xl bg-card/60 backdrop-blur-sm border border-border/40 hover:border-primary/30 transition-all duration-300 hover:box-glow-subtle"
           >
             <div className="flex-1 min-w-0">
-              <p className="text-sm sm:text-base text-foreground group-hover:text-primary transition-colors font-medium leading-snug">
+              <p className="text-sm sm:text-base text-foreground/90 group-hover:text-primary transition-colors font-medium leading-relaxed">
                 {item.title}
               </p>
-              <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
+              <div className="flex items-center gap-2 mt-2.5 text-xs text-muted-foreground">
                 <span className="text-primary/70 font-display text-[10px] tracking-wider">{item.source}</span>
-                <span>·</span>
+                <span className="text-border">·</span>
                 <span>{item.time}</span>
               </div>
             </div>
-            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors mt-1 shrink-0" />
+            <ExternalLink className="w-4 h-4 text-muted-foreground/40 group-hover:text-primary transition-colors mt-1 shrink-0" />
           </a>
         ))}
       </div>
