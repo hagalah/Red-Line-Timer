@@ -54,13 +54,21 @@ export default function Index() {
               Live
             </span>
           </div>
-          <Link
-            to="/contact"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[10px] font-display uppercase tracking-[0.2em] text-muted-foreground hover:text-primary border border-border/50 hover:border-primary/30 transition-all duration-300 hover:box-glow-subtle"
-          >
-            <Mail className="w-3 h-3" />
-            Contact
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link
+              to="/about"
+              className="px-3 py-1.5 rounded-lg text-[10px] font-display uppercase tracking-[0.2em] text-muted-foreground hover:text-primary border border-border/50 hover:border-primary/30 transition-all duration-300 hover:box-glow-subtle"
+            >
+              About
+            </Link>
+            <Link
+              to="/contact"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[10px] font-display uppercase tracking-[0.2em] text-muted-foreground hover:text-primary border border-border/50 hover:border-primary/30 transition-all duration-300 hover:box-glow-subtle"
+            >
+              <Mail className="w-3 h-3" />
+              Contact
+            </Link>
+          </div>
         </nav>
 
         {/* Hero */}
@@ -109,9 +117,9 @@ export default function Index() {
               <span className="text-[10px] text-muted-foreground/40">
                 Data sourced from public news feeds
               </span>
-              <Link to="/contact" className="text-[10px] text-muted-foreground/40 hover:text-primary transition-colors">
-                Contact
-              </Link>
+              <Link to="/about" className="text-[10px] text-muted-foreground/40 hover:text-primary transition-colors">About</Link>
+              <Link to="/privacy" className="text-[10px] text-muted-foreground/40 hover:text-primary transition-colors">Privacy</Link>
+              <Link to="/contact" className="text-[10px] text-muted-foreground/40 hover:text-primary transition-colors">Contact</Link>
             </div>
           </div>
         </footer>
