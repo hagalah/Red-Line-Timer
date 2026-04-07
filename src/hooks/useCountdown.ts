@@ -5,6 +5,7 @@ interface CountdownState {
   hours: number;
   minutes: number;
   seconds: number;
+  totalSeconds: number;
   isExpired: boolean;
   targetDate: Date;
 }
@@ -24,7 +25,7 @@ export function useCountdown(customDeadline?: Date): CountdownState {
     const distance = targetDate.getTime() - now;
 
     if (distance <= 0) {
-      return { days: 0, hours: 0, minutes: 0, seconds: 0, isExpired: true, targetDate };
+      return { days: 0, hours: 0, minutes: 0, seconds: 0, totalSeconds: 0, isExpired: true, targetDate };
     }
 
     return {
@@ -32,6 +33,7 @@ export function useCountdown(customDeadline?: Date): CountdownState {
       hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
       minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
       seconds: Math.floor((distance % (1000 * 60)) / 1000),
+      totalSeconds: Math.floor(distance / 1000),
       isExpired: false,
       targetDate,
     };
