@@ -8,7 +8,7 @@ function TimerDigit({ value, label, intense }: { value: number; label: string; i
       <div className={cn("glass-card px-3 py-2 sm:px-5 sm:py-4 md:px-6 md:py-5 transition-all duration-500", intense && "border-primary/60 box-glow")}>
         <div
           className={cn(
-            "font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-wider text-primary text-glow-intense tabular-nums transition-all duration-500",
+            "font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-wider text-primary text-glow-intense tabular-nums transition-all duration-500",
             intense && "text-glow-intense"
           )}
           style={{ animation: "tick 1s ease-in-out infinite" }}
@@ -25,7 +25,7 @@ function TimerDigit({ value, label, intense }: { value: number; label: string; i
 
 function Separator({ intense }: { intense?: boolean }) {
   return (
-    <span className={cn("font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-primary/40 self-start mt-3 sm:mt-5 md:mt-6 transition-colors duration-500", intense && "text-primary/80")}>
+    <span className={cn("font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary/40 self-start mt-3 sm:mt-5 md:mt-6 transition-colors duration-500", intense && "text-primary/80")}>
       :
     </span>
   );

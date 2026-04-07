@@ -54,18 +54,18 @@ export default function Index() {
               Live
             </span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             <Link
               to="/about"
-              className="px-3 py-1.5 rounded-lg text-[10px] font-display uppercase tracking-[0.2em] text-muted-foreground hover:text-primary border border-border/50 hover:border-primary/30 transition-all duration-300 hover:box-glow-subtle"
+              className="px-4 py-2 rounded-lg text-xs font-display uppercase tracking-[0.2em] text-foreground/80 hover:text-primary border border-border/60 hover:border-primary/40 transition-all duration-300 hover:box-glow-subtle"
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[10px] font-display uppercase tracking-[0.2em] text-muted-foreground hover:text-primary border border-border/50 hover:border-primary/30 transition-all duration-300 hover:box-glow-subtle"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-display uppercase tracking-[0.2em] text-foreground/80 hover:text-primary border border-border/60 hover:border-primary/40 transition-all duration-300 hover:box-glow-subtle"
             >
-              <Mail className="w-3 h-3" />
+              <Mail className="w-3.5 h-3.5" />
               Contact
             </Link>
           </div>
