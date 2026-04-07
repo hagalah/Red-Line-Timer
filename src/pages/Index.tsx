@@ -77,10 +77,10 @@ export default function Index() {
             RED LINE <span className="text-primary">TIMER</span>
           </h1>
 
-          <p className="text-muted-foreground text-xs sm:text-sm tracking-[0.2em] uppercase font-display text-center max-w-lg">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg tracking-[0.2em] uppercase font-display text-center max-w-lg">
             Trump's deadline for Iran to reopen the Strait of Hormuz
           </p>
-          <p className="text-primary/60 text-[11px] sm:text-xs tracking-wider font-display mt-2 text-center">
+          <p className="text-primary/60 text-xs sm:text-sm tracking-wider font-display mt-2 text-center">
             Tuesday, April 7 — 8:00 PM Eastern Time
           </p>
         </header>
